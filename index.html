@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/assets/favicon/Favicon.ico" type="image/x-icon">
+    <title>Yu-Gi-Oh - DIO</title>
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/containers_and_frames.css">
+    <link rel="stylesheet" href="./src/styles/buttons.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+    <div class="bg-video">
+        <video class="video" autoplay muted loop>
+            <source src="./src/assets/video/yugi.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="container">
+        <div class="container_left framed-golden-2">
+            <div class="score_box frame">
+                <span id="score_points">
+                    
+                </span>
+            </div>
+            <div class="menu_avatar">
+                <img id="card-image" >
+            </div>
+            <div class="card_details frame">
+                <p id="card-name">Selecione</p>
+                <p id="card-type">uma carta!</p>
+            </div>
+            <button class="frame framed-golden bgm" onclick="playbgm()">Ligar Audio</button>
+        </div>
+        <div class="container_right">
+            <div class="card-box_container">
+                <div class="card-box framed computer-cards">
+
+                </div>
+                
+                <div class="card-versus_container">
+                    <div class="versus-top">
+                        <div class="card-infield">
+                            <img id="player-field-card" height="180px" width="125px">
+                        </div>
+                        
+                        <img height="100px" src="./src/assets/icons/millenium2.png">
+                        
+                        <div class="card-infield">
+                            <img id="computer-field-card" height="180px" width="125px">
+                        </div>
+                        
+                    </div>
+
+                    <div class="versus-bottom">
+                        <button id="next-duel" class="rpgui-button" onclick="resetDuel()"></button>
+                    </div>
+                </div>
+
+                <div class="card-box framed player-cards">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./src/scripts/engine.js"></script>
+</body>
+</html>
